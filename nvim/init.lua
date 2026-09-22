@@ -9,6 +9,9 @@ vim.o.number = true
 vim.o.smartcase = true
 vim.o.ignorecase = true
 vim.o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.expandtab = true
+
 vim.opt.guicursor = {
   "n-v-c:block-Cursor/lCursor",         -- Block in Normal, Visual, Command modes
   "i-ci-ve:ver25-Cursor/lCursor",       -- Vertical bar (25% width) in Insert mode
@@ -24,7 +27,6 @@ local state_dir = vim.fn.stdpath("state")
 vim.opt.backupdir = data_dir .. "/backup//"
 vim.opt.directory = state_dir .. "/swap//"
 vim.opt.undodir = state_dir .. "/undo//"
-
 
 -- Autoload plugins
 require("config/lazy")
